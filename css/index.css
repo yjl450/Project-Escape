@@ -1,0 +1,101 @@
+
+body{
+	background-color: black;
+}
+
+#panel1{
+	text-align: center;
+	position: relative;
+	top: 0;
+
+}
+#bubble{
+	position: absolute;
+	top: -30px;
+	left: 600px;
+	display: none;
+}
+
+#text{
+	position: absolute;
+	top: 30px;
+	left: 550px;
+	height: 200px;
+	width: 400px;
+	opacity:0;
+	z-index: 3;
+}
+
+#cyberspace1{
+	position: relative;
+	top: -270px;
+}
+
+#fade1{
+	position: absolute;
+	top: 80px;
+	z-index: 5;
+	cursor: pointer;
+
+}
+
+#panel2{
+	text-align: center;
+	position: relative;
+	top: -200px;
+}
+#mac{
+	position: relative;
+	top: -100px;
+	border-top-width: 10px;
+	z-index: 5;
+}
+
+#cyberspace2{
+	position: relative;
+	top: -700px;
+	z-index: -1;
+}
+
+#fade2{
+	position: absolute;
+	top: 50px;
+	left: 400px;
+	z-index: 1;
+}
+
+#panel3{
+	text-align: center;
+	position: relative;
+	top: -750px;
+}
+
+#retunred{
+	position: absolute;
+}
+
+h1{
+	font-family: arial;
+	font-size: 90px;
+	border-width: 2px;
+	position: absolute;
+	top: 200px;
+	left: 320px;
+	color: red;
+	animation-name: flashing;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes flashing {
+	0%{ opacity: 0;
+	} 
+	25%{ opacity: 1;
+	}
+	50% {opacity: 0;
+	}
+	75%{ opacity: 1;
+	}
+	100%{ opacity: 0;
+	}
+}

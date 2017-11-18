@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>p4</title>
+	<link rel="stylesheet" type="text/css" href="css/css4.css">
+</head>
+<body>
+<div id="part4"><!--Part 4-->
+<div id="chase1"><img src="image/p4/chase1.jpg" width="960px"></div>
+<div id="chase2"><img src="image/p4/chase2.jpg" width="960px"></div>
+<div id="userInput">
+<input id="inputNum">
+<div id="inputConfirm" onclick="inputConfirm()">DEACTIVATE</div>
+</div>
+<div id="jump">
+	<img src="image/p4/jump1wide.jpg" width="960px">
+	<img src="image/p4/jump2wide.jpg" width="960px">
+	<img src="image/p4/jump3wide.jpg" width="960px">
+</div>
+
+
+
+<script>
+	//generate a random number
+	var ranChase = Math.floor((Math.random()*5));
+	console.log(ranChase);
+	//click to display the jump and next section
+	function inputConfirm(){
+	var inputNum = document.getElementById('inputNum').value;
+	if(inputNum == ranChase){
+		confirm("Authentication Successed" +"\n"+"Firewall Deactivated");
+		document.getElementById('jump').style.display = "block";
+		//display next section
+	}
+	else{
+		confirm("Authentication Failed"+"\n"+"Please Try Again");
+	}
+	}
+</script>
+
+
+</div>
+</body>
+</html>

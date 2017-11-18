@@ -1,0 +1,17 @@
+html,body{ 
+	margin:0px; 
+	height:100%; 
+	font-family: helvetica;
+} 
+
+body{
+	background-color: black;
+	width:960px;
+	text-align: center;
+    margin:0 auto;
+    font-family: helvetica;
+}
+
+#doorChoose{
+	padding-bottom: 35px;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comic Escape Page 6</title>
+	<link rel="stylesheet" type="text/css" href="css/css6.css">
+</head>
+<body style="background-color: black;">
+
+<div id="bubble" onmouseover="appear()">
+		<img src="image/speech_bubble.png" alt=""> 
+		<div id="text">
+			<h2 id="exclamation"> The way out! </h2>
+		</div>
+
+		<script> 
+			function appear(){
+			document.getElementById("bubble").style.opacity = "1";
+			}
+
+		</script>
+		
+</div>
+
+<div id="container">
+
+	<div id="squareDiv"></div>
+
+	<div id="panel1">
+		<img id="portal" src="image/p6/com(15).jpg" height="450" width="960">
+		
+		<button class="button" onclick="howto()">Click to enter the portal</button>
+			<script>
+				function howto(){
+					document.getElementById("instructions").style.display = "inline";
+					document.getElementById("colors").style.display = "inline";
+					document.getElementById("panel2").style.display = "inline";
+				}
+			</script>
+		
+		<div id="instructions">
+			<p>"All you have to do is follow the color sequence <br>
+			by pressing the buttons in the correct order."</p><br>
+		</div>
+
+		<div id="colors">
+			<button class ="button2" onclick="colorChange()">Click to recieve the color sequence</button> <br>
+			<br>
+				<script>
+					function colorChange(){
+						document.getElementById("squareDiv").style.animation = "colorChange 30s infinite";
+						document.getElementById("circle").style.animation = "colorChange 30s infinite";
+						}	
+				</script>
+				<div id="circle"></div>
+				<br>
+			</div>
+		</div>
+
+</div>
+
+<div id="panel2" >
+
+<p>Please choose the correct sequence</p>
+
+<div id="row1">
+	<button id="red"">RED</button>
+
+	<button id="blue">BLUE</button>
+	
+	<button id="blue">BLUE</button>
+
+	<button id="yellow">YELLOW</button>		
+
+	<button id="purple">PURPLE</button>
+
+	<button id="correct" onclick="moveOn()"> sequence 1 </button><br>
+</div>
+<!-- second sequnce -->
+<div id="row2"><
+	<button id="red"">RED</button>
+
+	<button id="blue">BLUE</button>
+	
+	<button id="blue">BLUE</button>
+
+	<button id="green">GREEN</button>		
+
+	<button id="purple">PURPLE</button>
+	
+	<button id="wrong" onclick="tryAgain()"> sequence 2 </button>
+
+</div>
+
+<script>
+	function moveOn(){
+		confirm("You did it!");
+		//parent.say();
+		//parent;
+		parent.window.document.getElementById("part7").style.display="block";
+		parent.window.document.getElementById("ending").style.display="block";
+	}
+
+	function tryAgain(){
+		alert("TRY AGAIN!");
+
+	}
+</script>
+
+</div>
+
+</body>
+</html>

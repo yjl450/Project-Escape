@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>p5</title>
+	<link rel="stylesheet" type="text/css" href="css/css5.css">
+</head>
+<body  style="overflow:scroll;overflow-x:hidden">
+<div><!--part 5 -->
+<div id="doorChoose" onmouseover="doorHover()" onmouseout="doorRecover()">
+	<img id="door" src="image/p5/door.jpg" width="960px" usemap="#door">
+	<map name="door">
+	<area shape="rect" coords="0,0,400,480" onclick="leftDoor()">
+	<area shape="rect" coords="401,0,562,480" onclick="midDoor()">
+	<area shape="rect" coords="563,0,960,480" onclick="rightDoor()">		
+	</map>
+</div>
+
+
+<script type="text/javascript">
+	//hover to change the picture
+	function doorHover(){
+		document.getElementById('door').src = "image/p5/hover.jpg";
+	}
+
+	//move away the mouse to get back to the original picture
+	function doorRecover(){
+		document.getElementById('door').src = "image/p5/door.jpg";
+	}
+
+	//produce a random number between 1-3
+	var ran = Math.floor((Math.random()*3));
+	console.log(ran);
+
+	//compare the random number with the click event to decide whether it is the right door
+	function leftDoor(){
+		var door = 0;
+		if (door == ran) {
+			//display next section
+		}
+		else{
+			alert("Oh no!" + "\n" + "This could be the worst decision you've ever made!");
+		}
+	}
+
+	function midDoor(){
+		var door = 1;
+		if (door == ran) {
+			//display next section
+		}
+		else{
+			alert("I unserstand you are not always lucky." + "\n" + "TRY AGAIN!");
+		}
+	}
+
+	function rightDoor(){
+		var door = 2;
+		if (door == ran) {
+			//display next section
+		}
+		else{
+			alert("This does not seem like the right way." + "\n" + "Guess one more time.");
+		}
+	}
+</script>
+
+
+</div>
+</body>
+</html>

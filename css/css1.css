@@ -1,0 +1,73 @@
+body{
+	margin-top: 35px;
+}
+
+p {
+	font-family: Arial; 
+	color: white;
+	font-size: 20px;
+}
+
+#intro_text{
+	text-align: left;
+	margin-left: 235px;
+}
+
+#goal{
+	text-align: left;
+	margin-left: 235px;
+}
+
+#panel1{
+	background-color: black;
+	text-align: center;
+}
+
+#panel2{
+	background-color: black;
+	margin-left: 225px;
+
+}
+
+#panel3{
+	background-color: black;
+	margin-left: 223px;
+}
+
+.overlap{
+	text-align: center;
+}
+
+.sitting{
+	position: relative;
+	cursor: pointer;
+}
+
+#sitting_bubble{
+	position: absolute;
+	top: 40px;
+	right:300px;
+	height: 200px;
+	width: 400px;
+	opacity:0;
+}
+h1{
+	position: absolute;
+	top:70px;
+	right: 425px;
+	opacity: 0;
+}
+
+.gif{
+	position: absolute;
+	top: 1040px;
+	right: 232px;
+	border-color: black;
+	border-style:inset;
+	border-width: 5px;
+
+}
+
+.overlap{
+	cursor: pointer;
+}

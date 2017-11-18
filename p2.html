@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>p2</title>
+	<link rel="stylesheet" type="text/css" href="css/css2.css">
+</head>
+<body style="overflow:scroll;overflow-x:hidden">
+<div><!--part 2 -->
+
+
+<div id="picSlide" onmouseover ="changePicture()">
+	<img id="slideLeft" src="image/p2/1.jpg" width="480px">
+</div>
+
+<div id="border"></div>
+
+<div id="overlay">
+<div  onclick="popupfunc1()">
+	<img id="popupBkg" src="image/p2/1.jpg" width="960px">
+</div>
+
+<div id="popup" onclick="popupfunc2()">
+	<img src="image/p2/4.jpg" width="480px">
+</div>
+</div>
+
+<script type="text/javascript">
+//hover mouse to change picture's position and source.
+function changePicture(){
+	document.getElementById('picSlide').style.animationName="leftToRight";
+	document.getElementById('picSlide').style.animationDuration="10s";
+	document.getElementById('picSlide').style.animationFillMode="forwards";
+	setTimeout("document.getElementById('slideLeft').src='image/p2/2.jpg';",3000);
+	document.getElementById('picSlide').style.paddingRight = "0px";
+	document.getElementById('picSlide').style.marginRight = "0px";
+}
+
+//click to change the background and pop up a picture, click the second time to close the pop up picture
+var clickTime = 1;
+function popupfunc1(){
+	if(clickTime == 1){
+	document.getElementById('popup').style.display = "block";
+	document.getElementById('popupBkg').src = "image/p2/3.jpg";
+	}
+	else{
+		//display next blocks
+	}
+
+}
+
+function popupfunc2(){
+	document.getElementById('popup').style.display = "none";
+	document.getElementById('popupBkg').src = "image/p2/5.jpg";
+	clickTime = 2;
+}
+
+</script>
+
+
+</div>
+</body>
+</html>

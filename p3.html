@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>p3</title>
+	<link rel="stylesheet" type="text/css" href="css/css3.css">
+</head>
+<body>
+<div id="part3"><!--part 3 -->
+
+<img src="image/p3/macuser.jpg" id="macuser">
+
+<div id="mailBkg">
+
+<div id="mailLogin">
+	<img src="image/p3/icon.png">
+	<h2 class="text">Sign in</h2>
+	<h5 class="text">to continue to Gmail</h5><br><br>
+	<p class="mailInstr"><b>Email</b></p>
+	<input id="mailAddress"><br><br>
+	<p class="mailInstr"><b>Forgot email?</b></p><br>
+	<p class="mailInstr"><b>More options</b></p>
+	<div id="btn" onclick="enterInbox()">NEXT</div><br><br>
+</div>
+
+<div id="mailInbox">
+
+<img src="image/p3/1inbox.jpg" width="960px" usemap="#1inbox" id="inbox1">
+<map name="1inbox" id="1inbox">
+	<area shape="rect" coords="225,119,940,146" onclick="inboxfunc1()">	
+</map>
+
+<img src="image/p3/2inbox.jpg" width="960px" usemap="#2inbox" id="inbox2">
+<map name="2inbox" id="2inbox">
+	<area shape="rect" coords="225,78,277,109" onclick="inboxfunc2()">
+	<area shape="rect" coords="36,174,75,186" onclick="inboxfunc2()">
+</map>
+
+<img src="image/p3/3inbox.jpg" width="960px" usemap="#3inbox" id="inbox3">
+<map name="3inbox" id="3inbox">
+	<area shape="rect" coords="225,119,940,146" onclick="inboxfunc3()">
+	<area shape="rect" coords="224,148,940,175" onclick="inboxfunc1()">
+</map>
+
+<img src="image/p3/4inbox.jpg" width="960px" usemap="#4inbox" id="inbox4">
+<map name="4inbox" id="4inbox">
+	<area shape="rect" coords="471,325,529,349" onclick="inboxfunc4()">
+	<area shape="rect" coords="225,78,277,109" onclick="inboxfunc2()">
+	<area shape="rect" coords="36,174,75,186" onclick="inboxfunc2()">
+</map>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+	//click to enter the inbox
+	function enterInbox(){
+		var mailAdd = document.getElementById('mailAddress').value;
+		console.log(mailAdd);
+		document.getElementById('mailLogin').style.display="none";
+		document.getElementById('mailInbox').style.backgroundColor="white";
+		document.getElementById('inbox1').style.display="block";
+		confirm("New URGENT Mail Received!");
+	}
+
+	//click to enter the first mail
+	function inboxfunc1(){
+		document.getElementById('inbox1').style.display="none";
+		document.getElementById('inbox3').style.display="none";
+		document.getElementById('inbox2').style.display="block";
+	}
+
+	//click to return to the inbox
+	function inboxfunc2(){
+		document.getElementById('inbox2').style.display="none";
+		document.getElementById('inbox4').style.display="none";
+		document.getElementById('inbox3').style.display="block";
+		confirm("New URGENT Mail Received!");
+	}
+
+	function inboxfunc3(){
+		document.getElementById('inbox3').style.display="none";
+		document.getElementById('inbox4').style.display="block";
+	}
+
+	function inboxfunc(){
+		//display next block
+	}
+</script>
+
+
+</div>
+</body>
+</html>

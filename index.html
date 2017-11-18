@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Escape</title>
+	<link rel="stylesheet" type="text/css" href="css/css1.css">
+</head>
+<body style="background-color: black;">
+
+<!-- need to pick a better font -->
+<p id="intro_text">
+	Somewhere in Shanghai...<br>
+	In one of the many towering high rises<br>
+	A young tech innovator is busily tinkering away at their latest project.
+</p>
+
+<div id="panel1">
+	<img id="image" src="image/p1/PudongBW.jpg" height="450" width="960">
+
+	<script>
+		var imageSources = ["image/p1/IMG_0899.JPG","image/p1/IMG_0883.JPG","image/p1/com(16).jpg", "image/p1/PudongBW.jpg"]
+		
+		var index = 0;
+		setInterval(function(){
+			if (index === imageSources.length) {
+				index=0;
+			} //wanted to make it stop on the image of the computer lab but couldn't figure out how to do that. If you could that would be great otherwise I think it's fine as a loop.
+
+		document.getElementById("image").src = imageSources[index];
+		index++;
+	}, 3000);
+	</script>
+	
+</div> <br>
+
+<div class="sitting" id="panel2" onmouseover="appear()" >
+	<img src="image/p1/com(12).jpg" height="600" width="960">
+	<img id= "sitting_bubble" src="image/speech_bubble.png" alt=""> 
+	<h1 id="eureka"> EUREKA! </h1>
+
+	<script>
+		function appear(){
+			document.getElementById("sitting_bubble").style.opacity = "1";
+			document.getElementById("eureka").style.opacity = "1";
+		}
+	</script>
+
+</div>
+
+<p id="goal">Desiring to overcome the physcial limits of technology<br> 
+they are working to install software in the human brain <br>
+so that one day we may all surf the web hands free.</p>
+
+<div class = "overlap" onmousemove="changeImage()" onclick="Login()">
+
+	<img class = "gif" src="image/p1/com(3).gif" height="270" width="360">
+
+	<img class="load" id= "ag" src="image/p1/com(9).jpg" height="700" width="960">
+
+	<script>
+
+	function changeImage() {
+		var x = event.clientX;
+
+		if (x > 223 && x < 583){
+		document.getElementById("ag").src = "image/p1/com(10).jpg"
+	} else if (x > 583 && x < 1183) {
+		document.getElementById("ag").src = "image/p1/com(11).jpg"
+		}
+	else {
+		document.getElementById("ag").src = "image/p1/com(9).jpg"
+		}
+	}
+
+	function Login(){
+	window.location.href="main.html";}// has to be written when combining other parts: load next section of comic
+
+	</script>
+
+</div>
+
+</body>
+</html>
